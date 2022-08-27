@@ -75,13 +75,11 @@ section {
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: rgb(226, 43, 119);
 }
 
 .sec5 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: rgb(226, 43, 195);
 }
 
 .active {
@@ -338,6 +336,67 @@ section {
 .portfolio-item:hover .hover-item {
   opacity: 1;
   transform: scale(1);
+}
+
+.webs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.webs .web {
+  position: relative;
+  background-color: var(--color-grey-5);
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+.webs .web:hover {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: all 0.4s ease-in-out;
+}
+.webs .web:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+.webs .web img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+}
+.webs .web .web-text {
+  margin-top: -7px;
+  padding: 1.1rem;
+  border-top: 8px solid var(--color-secondary);
+}
+.webs .web .web-text h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.webs .web .web-text h4:hover {
+  color: var(--color-secondary);
+}
+.webs .web .web-text p {
+  color: var(--color-grey-2);
+  line-height: 2rem;
+  padding-bottom: 1rem;
+}
+
+.contact-content-container {
+  display: flex;
+  padding-top: 3.5rem;
+}
+.contact-content-container .left-contact {
+  flex: 2;
 }
 
 .btn-container {
